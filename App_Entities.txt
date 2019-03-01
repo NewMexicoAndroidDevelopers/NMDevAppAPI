@@ -1,0 +1,37 @@
+New Mexico Android Developers App
+
+Functionalities:
+-News Items
+-Meeting Items (use meetups API to RSVP through app?)
+-L2Android
+-message board
+
+Entity: NewsItem
+-link::string
+-description::string
+-type::string
+-postingMbr::string
+
+Entity: MeetingItem
+-date::string
+-time::string
+-location::string
+-description::string
+-newsItem::string
+-postingMbr::string
+-meetupsLink::string
+
+Entity: L2AndroidItem
+-postingMbr::string
+-link::string
+-shortDescription::string
+-type::string
+
+Entity: Member
+-callSign::string
+-password::string
+-email::string
+
+Entity: Message
+-postingMbr::string
+-body::string
