@@ -22,6 +22,7 @@ import org.springframework.stereotype.Component;
 public class MeetingItemEntity {
 
   private static EntityLinks entityLinks;
+
   @Id
   @NonNull
   @GeneratedValue(strategy = GenerationType.AUTO)
