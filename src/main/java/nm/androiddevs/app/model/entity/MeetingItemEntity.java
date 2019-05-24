@@ -1,5 +1,15 @@
-package nm.androiddevs.app;
+package nm.androiddevs.app.model.entity;
 
+
+import javax.persistence.Entity;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.stereotype.Component;
+
+@Getter
+@Setter
+@Entity
+@Component
 public class MeetingItemEntity {
 
   private String date;

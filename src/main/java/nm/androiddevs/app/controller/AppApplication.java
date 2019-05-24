@@ -1,4 +1,4 @@
-package nm.androiddevs.app;
+package nm.androiddevs.app.controller;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
