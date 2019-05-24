@@ -18,15 +18,17 @@ import org.springframework.stereotype.Component;
 @Setter
 @Entity
 @Component
-public class MessageEntity {
+public class MemberEntity {
 
   private static EntityLinks entityLinks;
   @Id
   @NonNull
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private UUID messageId;
-  private String postingMbr;
-  private String body;
+  private UUID memberId;
+  private String callSign;
+  private String password;
+  private String email;
+
 
   @PostConstruct
   private void initEntityLinks() {
@@ -35,12 +37,13 @@ public class MessageEntity {
 
   @Autowired
   private void setEntityLinks(EntityLinks entityLinks) {
-    MessageEntity.entityLinks = entityLinks;
+    MemberEntity.entityLinks = entityLinks;
   }
 
   public URI getHref() {
-    return entityLinks.linkForSingleResource(MessageEntity.class, messageId).toUri();
+    return entityLinks.linkForSingleResource(MemberEntity.class, memberId).toUri();
 
   }
+
 
 }
